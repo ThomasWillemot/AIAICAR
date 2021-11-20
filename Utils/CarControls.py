@@ -20,13 +20,15 @@ class CarControls:
         for i in range(len(self.config_ports)):
             if i % 2 == 0:
                 GPIO.output(self.config_ports[i], GPIO.HIGH)
+            else:
+                GPIO.output(self.config_ports[i], GPIO.LOW)
 
     def drive_backward(self):
         for i in range(len(self.config_ports)):
-            if i % 2 == 1:
-                print(i)
-                print(self.config_ports[i])
+            if i % 2 == 1:=
                 GPIO.output(self.config_ports[i], GPIO.HIGH)
+            else:
+                GPIO.output(self.config_ports[i], GPIO.LOW)
 
     def exit_drive(self):
         GPIO.cleanup()
