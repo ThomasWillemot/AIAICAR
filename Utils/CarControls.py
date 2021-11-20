@@ -7,6 +7,9 @@ class CarControls:
     def __init__(self,config_ports):
         # Stands for [position left/right][position front/rear][forward/backward]
         self.config_ports = config_ports
+        GPIO.setmode(GPIO.BCM)
+        for port in self.config_ports:
+            GPIO.setup(port, GPIO.OUT)
 
     def stop(self):
         for port in self.config_ports:
@@ -22,6 +25,9 @@ class CarControls:
         for i in range(len(self.config_ports)):
             if i % 2 == 1:
                 GPIO.output(self.config_ports[i], GPIO.HIGH)
+
+    def exit_drive(self):
+        GPIO.cleanup()
 
     def rotate_left(self):
         return False

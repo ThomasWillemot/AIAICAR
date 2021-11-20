@@ -55,7 +55,7 @@ def main():
     time.sleep(5)
     print("Stop")
     car_controls.stop()
-
+    car_controls.exit_drive()
 
 if __name__ == "__main__":
     main()
