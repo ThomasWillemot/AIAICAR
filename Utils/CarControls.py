@@ -30,14 +30,25 @@ class CarControls:
             else:
                 GPIO.output(self.config_ports[i], GPIO.LOW)
 
+
     def exit_drive(self):
         GPIO.cleanup()
 
     def rotate_left(self):
-        return False
+        high_ports = [1, 2, 5, 6]
+        for i in range(len(self.config_ports)):
+            if i in high_ports:
+                GPIO.output(self.config_ports[i], GPIO.HIGH)
+            else:
+                GPIO.output(self.config_ports[i], GPIO.LOW)
 
     def rotate_right(self):
-        return False
+        high_ports = [0, 3, 4, 7]
+        for i in range(len(self.config_ports)):
+            if i in high_ports:
+                GPIO.output(self.config_ports[i], GPIO.HIGH)
+            else:
+                GPIO.output(self.config_ports[i], GPIO.LOW)
 
     def drive_front_left(self):
         return False

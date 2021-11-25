@@ -18,6 +18,12 @@ def main():
             if char == ord('s'):
                 car_controls.drive_backward()
                 screen.addstr(2,20,"BW")
+            if char == ord('q'):
+                car_controls.drive_backward()
+                screen.addstr(2,20,"RL")
+            if char == ord('e'):
+                car_controls.drive_backward()
+                screen.addstr(2, 20, "RR")
             if char == ord(' '):
                 car_controls.stop()
                 screen.addstr(2,20,"Up")
