@@ -1,6 +1,5 @@
 import logging
 import time
-from pynput import keyboard
 import Utils.CarControls as CarControls
 from Utils.KeyboardDriving import KeyboardDriving
 
