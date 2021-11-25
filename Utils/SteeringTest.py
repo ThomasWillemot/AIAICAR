@@ -1,5 +1,5 @@
 import curses
-import Utils.CarControls as CarControls
+import CarControls as CarControls
 
 screen = curses.initscr()
 #curses.noecho()
