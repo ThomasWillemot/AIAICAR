@@ -35,7 +35,7 @@ class CarControls:
         GPIO.cleanup()
 
     def rotate_left(self):
-        high_ports = [1, 2, 5, 6]
+        high_ports = [0, 3, 5, 6]
         for i in range(len(self.config_ports)):
             if i in high_ports:
                 GPIO.output(self.config_ports[i], GPIO.HIGH)
@@ -43,7 +43,7 @@ class CarControls:
                 GPIO.output(self.config_ports[i], GPIO.LOW)
 
     def rotate_right(self):
-        high_ports = [0, 3, 4, 7]
+        high_ports = [1,2,4,7]
         for i in range(len(self.config_ports)):
             if i in high_ports:
                 GPIO.output(self.config_ports[i], GPIO.HIGH)
@@ -62,3 +62,60 @@ class CarControls:
     def drive_back_right(self):
         return False
 
+    def motor_0(self):
+        high_ports = [0]
+        for i in range(len(self.config_ports)):
+            if i in high_ports:
+                GPIO.output(self.config_ports[i], GPIO.HIGH)
+            else:
+                GPIO.output(self.config_ports[i], GPIO.LOW)  
+
+    def motor_1(self):
+        high_ports = [1]
+        for i in range(len(self.config_ports)):
+            if i in high_ports:
+                GPIO.output(self.config_ports[i], GPIO.HIGH)
+            else:
+                GPIO.output(self.config_ports[i], GPIO.LOW)
+    def motor_2(self):
+        high_ports = [2]
+        for i in range(len(self.config_ports)):
+            if i in high_ports:
+                GPIO.output(self.config_ports[i], GPIO.HIGH)
+            else:
+                GPIO.output(self.config_ports[i], GPIO.LOW)
+    def motor_3(self):
+        high_ports = [3]
+        for i in range(len(self.config_ports)):
+            if i in high_ports:
+                GPIO.output(self.config_ports[i], GPIO.HIGH)
+            else:
+                GPIO.output(self.config_ports[i], GPIO.LOW)
+    def motor_4(self):
+        high_ports = [4]
+        for i in range(len(self.config_ports)):
+            if i in high_ports:
+                GPIO.output(self.config_ports[i], GPIO.HIGH)
+            else:
+                GPIO.output(self.config_ports[i], GPIO.LOW)
+    def motor_5(self):
+        high_ports = [5]
+        for i in range(len(self.config_ports)):
+            if i in high_ports:
+                GPIO.output(self.config_ports[i], GPIO.HIGH)
+            else:
+                GPIO.output(self.config_ports[i], GPIO.LOW)
+    def motor_6(self):
+        high_ports = [6]
+        for i in range(len(self.config_ports)):
+            if i in high_ports:
+                GPIO.output(self.config_ports[i], GPIO.HIGH)
+            else:
+                GPIO.output(self.config_ports[i], GPIO.LOW)
+    def motor_7(self):
+        high_ports = [7]
+        for i in range(len(self.config_ports)):
+            if i in high_ports:
+                GPIO.output(self.config_ports[i], GPIO.HIGH)
+            else:
+                GPIO.output(self.config_ports[i], GPIO.LOW) 
