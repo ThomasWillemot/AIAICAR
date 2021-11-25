@@ -36,7 +36,7 @@ print("\n")
 
 while(1):
 
-    x= raw_input('Command:').split()
+    x= input('Command:').split()
     
     if x=='f':
         print("forward")
