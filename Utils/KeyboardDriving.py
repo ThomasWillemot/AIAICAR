@@ -2,20 +2,19 @@ import logging
 import time
 from pynput import keyboard
 
-
 class KeyboardDriving:
 
     def __init__(self, car_controls):
         self.car_control = car_controls
 
-    def on_press(self, key):
+    def on_press(self,key):
         try:
             if key.char == 'w':
                 self.car_control.drive_forward()
             elif key.char == 's':
                 self.car_control.drive_backward()
             else:
-                self.car_control.stop()
+                self.car_control.stopt()
         except AttributeError:
             print('special key {0} pressed'.format(
                 key))
